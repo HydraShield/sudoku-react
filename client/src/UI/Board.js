@@ -1,10 +1,10 @@
 import React from "react";
 import Tile from "./Tile";
 
-const Board = ({ puzzle, grid, handleChange }) => {
+const Board = () => {
     return (
         <div className="board">
-            <Tile puzzle={puzzle} grid={grid} handleChange={handleChange} />
+            <Tile />
         </div>
     );
 }
