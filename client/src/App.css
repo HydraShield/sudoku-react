@@ -1,0 +1,123 @@
+:root {
+  --color1: rgb(256, 256, 256);
+  --color1-dark: rgb(128, 128, 128);
+  --color1-darker: rgb(32, 245, 3);
+  --color2: rgb(120, 119, 123);
+  --color2-dark: rgb(50, 50, 52);
+  --color2-darker: black;
+  --border: 5px;
+  --box-length: 80px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.Sudoku {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-image: linear-gradient(120deg, #040404 0%, #535151 100%);
+  padding: 50px;
+  height: 100vh;
+  font-size: 40px;
+  color: white;
+}
+
+.tile {
+  width: var(--box-length);
+  height: var(--box-length);
+  text-align: center;
+  font-size: 40px;
+  outline: none;
+  background-color: var(--color1);
+  border: 2px solid black;
+  margin-left: -1px;
+  margin-top: -1px;
+}
+
+.top-border{
+  margin-top: var(--border);
+}
+
+.left-border{
+  margin-left: var(--border);
+}
+
+.top-left-border{
+  margin-top: var(--border);
+  margin-left: var(--border);
+}
+
+.taken {
+  background-color: var(--color1-dark);
+  color: var(--color2-darker);
+}
+
+.initial {
+  margin-left: -1px;
+  margin-top: -1px;
+  width: var(--box-length);
+  height: var(--box-length);
+  text-align: center;
+  font-size: 40px;
+  outline: none;
+  background-color: var(--color1-darker);
+  border: 2px solid black;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(9, 0fr);
+  padding: 10px;
+}
+
+.interface {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.info-interface input {
+  width: 500px;
+  height: 80px;
+  text-align: center;
+  font-size: 50px;
+  outline: none;
+  color: var(--color2-dark);
+  background-color: var(--color1);
+  border: 2px solid var(--color2-dark);
+  margin-bottom: 20px;
+}
+
+.action-interface {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+button {
+  background-color: var(--color1);
+  padding: 8px 24px;
+  border: 2px solid var(--color2-dark);
+  border-radius: 8px;
+  color: var(--color2-dark);
+  font-size: 40px;
+  transition: 0.1s all ease-in-out;
+  width: 500px;
+  height: 60px;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  background-color: var(--color1-dark);
+}
